@@ -45,7 +45,7 @@ The first 2 days was exploring Phaser.js framework through tutorials and reading
 
 #### Live Demo
 
-[Live](https://upbeat-colden-0068d7.netlify.app/)
+[Live](https://app.netlify.com/sites/compassionate-poitras-076608/overview)
 
 #### To play locally
 
