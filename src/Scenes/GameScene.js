@@ -16,23 +16,20 @@ export default class GameScene extends Phaser.Scene {
   }
 
   preload() {
-    // load images
     this.load.image('logo', 'assets/logo.png');
   }
 
   create() {
     this.add.image(800, 600, 'sky').setScale(2);
 
-    // cameras setyp
     this.cameras.main.setBounds(0, 0, 1600, 1200);
     this.physics.world.bounds.width = 1600;
     this.physics.world.bounds.height = 1200;
 
-    // on screeen text setup
     scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '28px', fill: '#000' });
     scoreText.setScrollFactor(0);
 
-    // platforms
+
     platforms = this.physics.add.staticGroup();
 
     platforms.create(400, 1230, 'ground').setScale(5.5).refreshBody();
@@ -119,7 +116,7 @@ export default class GameScene extends Phaser.Scene {
   collectStar(player, star) {
     star.disableBody(true, true);
 
-    score += 10;
+    score += 100;
     scoreText.setText(`Score: ${score}`);
 
     if (stars.countActive(true) === 0) {
@@ -145,8 +142,6 @@ export default class GameScene extends Phaser.Scene {
   }
 
   ScoreForm() {
-  // const playerName = localStorage.getItem('playerName');
-  // this.data = uploadGameData(playerName, this.score);
     this.scene.start('GameOver');
   }
 }
