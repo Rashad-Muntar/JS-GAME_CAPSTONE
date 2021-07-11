@@ -1,6 +1,5 @@
 /* eslint-disable class-methods-use-this */
 import Phaser from 'phaser';
-import LocalStorage from '../API/localStorage';
 
 let platforms;
 let player;
@@ -28,7 +27,6 @@ export default class GameScene extends Phaser.Scene {
 
     scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '28px', fill: '#000' });
     scoreText.setScrollFactor(0);
-
 
     platforms = this.physics.add.staticGroup();
 
@@ -138,7 +136,7 @@ export default class GameScene extends Phaser.Scene {
     player.setTint(0xff0000);
     player.anims.play('turn');
     this.ScoreForm();
-    LocalStorage.saveScore(score);
+    localStorage.setItem('score', score);
   }
 
   ScoreForm() {

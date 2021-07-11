@@ -1,6 +1,5 @@
 import Phaser from 'phaser';
 import Dom from '../API/dom';
-import LocalStorage from '../API/localStorage';
 import bg from '../assets/sky2.jpg';
 
 export default class GameOverScene extends Phaser.Scene {
@@ -22,8 +21,7 @@ export default class GameOverScene extends Phaser.Scene {
     });
     this.title.setOrigin(0.5, 0.5);
 
-    const score = LocalStorage.getScore();
-    LocalStorage.clearStorage();
+    const score = localStorage.getItem('score');
 
     this.score = this.add.text(400, 200, `Your score is: ${score}`, {
       font: '35px monospace',

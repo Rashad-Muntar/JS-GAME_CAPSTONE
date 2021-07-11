@@ -56,7 +56,9 @@ $ https://github.com/Rashad-Muntar/JS-GAME_CAPSTONE.git
 
 Change directory, install dependencies and start playing
 
-runc `$ npm intall` to install all dependencies
+## NPM Commands
+run `$ npm install` to install all dependencies
+run `$ npm build` to build project`
 run `$ npm start` to start dev server
 
 #### Prerequisites
