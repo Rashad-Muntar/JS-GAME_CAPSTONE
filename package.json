@@ -1,0 +1,49 @@
+{
+  "name": "last-phaser",
+  "version": "1.0.0",
+  "description": "### Snapshot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rashad-Muntar/JS-GAME_CAPSTONE.git"
+  },
+  "author": "Rashad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rashad-Muntar/JS-GAME_CAPSTONE/issues"
+  },
+  "homepage": "https://github.com/Rashad-Muntar/JS-GAME_CAPSTONE#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^5.2.6",
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "file-loader": "^4.2.0",
+    "raw-loader": "^3.1.0",
+    "style-loader": "^2.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.19.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^27.0.4",
+    "phaser": "^3.50.0",
+    "phaser3-rex-plugins": "^1.1.53",
+    "regenerator-runtime": "^0.13.7",
+    "terser-webpack-plugin": "^2.2.1",
+    "webpack": "^4.41.2",
+    "webpack-merge": "^4.2.2"
+  }
+}
