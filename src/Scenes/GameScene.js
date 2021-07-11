@@ -114,7 +114,7 @@ export default class GameScene extends Phaser.Scene {
   collectStar(player, star) {
     star.disableBody(true, true);
 
-    score += 100;
+    score += 10;
     scoreText.setText(`Score: ${score}`);
 
     if (stars.countActive(true) === 0) {
@@ -137,6 +137,7 @@ export default class GameScene extends Phaser.Scene {
     player.anims.play('turn');
     this.ScoreForm();
     localStorage.setItem('score', score);
+    score = 0
   }
 
   ScoreForm() {
