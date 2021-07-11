@@ -137,7 +137,7 @@ export default class GameScene extends Phaser.Scene {
     player.anims.play('turn');
     this.ScoreForm();
     localStorage.setItem('score', score);
-    score = 0
+    score = 0;
   }
 
   ScoreForm() {
