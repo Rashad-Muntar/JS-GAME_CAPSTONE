@@ -51,7 +51,7 @@ The first 2 days was exploring Phaser.js framework through tutorials and reading
 
 Clone repo 
 ```
-$ https://github.com/Rashad-Muntar/JS-Game.git
+$ https://github.com/Rashad-Muntar/JS-GAME_CAPSTONE.git
 ```
 
 Change directory, install dependencies and start playing
@@ -63,7 +63,7 @@ run `$ npm start` to start dev server
 Web browser like Chrome, Mozilla or similar.
 
 ### Github Repo
-https://github.com/Rashad-Muntar/JS-Game.git
+https://github.com/Rashad-Muntar/JS-GAME_CAPSTONE.git
 
 
 and many more.....
@@ -77,7 +77,7 @@ and many more.....
 ## 🤝 Contributing
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Rashad-Muntar/JS-Game/issues/new).
+Feel free to check the [issues page](https://github.com/Rashad-Muntar/JS-GAME_CAPSTONE/issues/new).
 
 ## Show your support
 
