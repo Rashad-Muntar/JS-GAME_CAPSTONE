@@ -21,6 +21,9 @@
 
 This project is one of many Javascript project to be completed by [Microverse](https://www.microverse.org/) students.
 
+### Game Design Document
+[Untitled document.pdf](https://github.com/Rashad-Muntar/first-rails-application/files/6797471/Untitled.document.pdf)
+
 
 ### How to play
 
