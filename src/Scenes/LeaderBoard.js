@@ -47,7 +47,7 @@ export default class LeaderBoard extends Phaser.Scene {
       fill: '#999',
       align: 'left',
     });
-    
+
     this.playerScore.setOrigin(0.5, 0.5);
 
     // Buttons constructor

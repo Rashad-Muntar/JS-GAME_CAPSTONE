@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-catch */
 import 'regenerator-runtime/runtime';
 
 const api = (() => {
@@ -17,7 +18,7 @@ const api = (() => {
       );
       return scores.json();
     } catch (error) {
-      throw error
+      throw error;
     }
   };
 
@@ -40,8 +41,8 @@ const api = (() => {
 
       const responseObj = await result.json();
       return responseObj;
-    } catch(error) {
-      throw Error
+    } catch (error) {
+      throw Error;
     }
   };
 

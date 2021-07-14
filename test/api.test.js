@@ -2,17 +2,17 @@ import * as apiMock from './mock';
 import 'regenerator-runtime/runtime';
 
 describe('valid game created ', () => {
+  const response = { result: 'Leaderboard score created correctly.' };
 
   const mockUpload = jest.fn().mockImplementation((url, params, name, scores) => {
+    expect(url).toContain('Zl4d7IVkemOTTVg2fUdz');
 
-  expect(url).toContain('Zl4d7IVkemOTTVg2fUdz');
+    params.method = 'POST';
+    apiMock.fetchCall(url, params);
 
-  params.method = 'POST';
-  apiMock.fetchCall(url, params);
+    const data = { user: name, score: scores };
 
-  const data = { user: name, score: scores };
-
-  apiMock.mockLeaderBoard.result.push(data);
+    apiMock.mockLeaderBoard.result.push(data);
 
     return Promise.resolve({
       json: () => Promise.resolve(response),
@@ -32,11 +32,10 @@ describe('valid game created ', () => {
       expect(e).toMatch('error');
     }
   });
-
 });
 
 describe('get the leaderboard from API call', () => {
-//   const unsorted = apiMock.mockLeaderBoard.result;
+  const unsorted = apiMock.mockLeaderBoard.result;
 
   const mockGetRankings = jest.fn().mockImplementation((url, params) => {
     expect(url).toContain('Zl4d7IVkemOTTVg2fUdz');
@@ -49,7 +48,6 @@ describe('get the leaderboard from API call', () => {
       json: () => Promise.resolve(unsorted),
     });
   });
-
 
   test('Leaderboard score created correctly', async () => {
     const data = await mockGetRankings(apiMock.url, apiMock.params);
