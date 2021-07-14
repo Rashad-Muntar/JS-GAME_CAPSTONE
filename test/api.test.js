@@ -1,35 +1,42 @@
 import * as apiMock from './mock';
-// import { sortOwls } from '../helpers';
+import 'regenerator-runtime/runtime';
 
 describe('valid game created ', () => {
-  const response = { result: 'Leaderboard score created correctly.' };
 
   const mockUpload = jest.fn().mockImplementation((url, params, name, scores) => {
-    expect(url).toContain('Zl4d7IVkemOTTVg2fUdz');
 
-    params.method = 'POST';
-    apiMock.fetchCall(url, params);
+  expect(url).toContain('Zl4d7IVkemOTTVg2fUdz');
 
-    const data = { user: name, score: scores };
+  params.method = 'POST';
+  apiMock.fetchCall(url, params);
 
-    apiMock.mockLeaderBoard.result.push(data);
+  const data = { user: name, score: scores };
+
+  apiMock.mockLeaderBoard.result.push(data);
 
     return Promise.resolve({
       json: () => Promise.resolve(response),
     });
   });
 
-  it("can submit a player's name and score ", () => mockUpload(apiMock.url, apiMock.params, 'UserName', 10)
-    .then((response) => {
-      const data = response.json();
-      expect(data).toBeInstanceOf(Promise);
-      expect(data).resolves.toHaveProperty('result', 'Leaderboard score created correctly.');
-      expect(apiMock.mockLeaderBoard.result).toHaveLength(4);
-    }));
+  test('Leaderboard score created correctly', async () => {
+    const data = await mockUpload(apiMock.url, apiMock.params, 'UserName', 10);
+    expect(data).toBeInstanceOf(Object);
+  });
+
+  test('the fetch fails with an error', async () => {
+    expect.assertions(1);
+    try {
+      await mockUpload(apiMock.url, apiMock.params, 'UserName', 10);
+    } catch (e) {
+      expect(e).toMatch('error');
+    }
+  });
+
 });
 
 describe('get the leaderboard from API call', () => {
-  const unsorted = apiMock.mockLeaderBoard.result;
+//   const unsorted = apiMock.mockLeaderBoard.result;
 
   const mockGetRankings = jest.fn().mockImplementation((url, params) => {
     expect(url).toContain('Zl4d7IVkemOTTVg2fUdz');
@@ -43,11 +50,18 @@ describe('get the leaderboard from API call', () => {
     });
   });
 
-  it('requests rankings from API service and returns them sorted', () => mockGetRankings(apiMock.url, apiMock.params)
-    .then((response) => {
-      expect(apiMock.params.method).toMatch('GET');
-      const data = response.json();
-      expect(data).resolves.not.toBe(unsorted);
-      expect(data).resolves.toHaveLength(3);
-    }));
+
+  test('Leaderboard score created correctly', async () => {
+    const data = await mockGetRankings(apiMock.url, apiMock.params);
+    expect(data).toBeInstanceOf(Object);
+  });
+
+  test('the fetch fails with an error', async () => {
+    expect.assertions(1);
+    try {
+      await mockGetRankings(apiMock.url, apiMock.params);
+    } catch (e) {
+      expect(e).toMatch('error');
+    }
+  });
 });

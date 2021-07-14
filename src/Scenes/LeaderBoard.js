@@ -42,11 +42,12 @@ export default class LeaderBoard extends Phaser.Scene {
       fill: '#aaa',
     });
 
-    this.playerScore = this.add.text(400, 350, player, {
+    this.playerScore = this.add.text(350, 350, player, {
       font: '25px monospace',
       fill: '#999',
       align: 'left',
     });
+    
     this.playerScore.setOrigin(0.5, 0.5);
 
     // Buttons constructor

@@ -1,6 +1,8 @@
 const fetchCall = (url, params) => params.method + url;
+const badFetch = (badUrl, params) => params.method + badUrl;
 
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IVkemOTTVg2fUdz/scores/';
+const badUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IV/scores/';
 
 const params = {
   mode: 'cors',
@@ -26,7 +28,9 @@ const mockLeaderBoard = {
 
 export {
   fetchCall,
+  badFetch,
   url,
+  badUrl,
   params,
   mockLeaderBoard,
 };

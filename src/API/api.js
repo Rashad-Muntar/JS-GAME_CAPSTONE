@@ -17,7 +17,7 @@ const api = (() => {
       );
       return scores.json();
     } catch (error) {
-      return error.json();
+      throw error
     }
   };
 
@@ -38,9 +38,10 @@ const api = (() => {
         },
       );
 
-      return result.json();
-    } catch (error) {
-      return error.json();
+      const responseObj = await result.json();
+      return responseObj;
+    } catch(error) {
+      throw Error
     }
   };
 
