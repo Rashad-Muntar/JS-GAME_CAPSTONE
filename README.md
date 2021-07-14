@@ -21,6 +21,9 @@
 
 This project is one of many Javascript project to be completed by [Microverse](https://www.microverse.org/) students.
 
+### Game Design Document
+[Untitled document.pdf](https://github.com/Rashad-Muntar/first-rails-application/files/6797471/Untitled.document.pdf)
+
 
 ### How to play
 
@@ -45,7 +48,7 @@ The first 2 days was exploring Phaser.js framework through tutorials and reading
 
 #### Live Demo
 
-[Live](https://upbeat-colden-0068d7.netlify.app/)
+[Live](https://app.netlify.com/sites/compassionate-poitras-076608/overview)
 
 #### To play locally
 
